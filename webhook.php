@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['secreto']) && $_POST[
     $salida = [];
     
     //$comando = "cd {$directorio_proyecto} && git pull origin new-napel 2>&1 && pm2 restart ${app} 2>&1";
-    $comando = "cd {$directorio_proyecto} && git pull 2>&1";
+    $comando = "cd {$directorio_proyecto} && git fetch origin && git reset --hard origin/main && git pull 2>&1";
     $salida[] = shell_exec($comando);
     
     http_response_code(200);
