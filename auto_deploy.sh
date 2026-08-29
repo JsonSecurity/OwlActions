@@ -65,7 +65,7 @@ while true; do
         ULTIMO_MENSAJE="$input_usuario"
     fi
 
-    echo -e "$A Preparando Git con el mensaje: '$MENSAJE_ACTUAL'"
+    echo -e "\n$A Preparando Git con el mensaje: '$MENSAJE_ACTUAL'\n"
     
     # Comandos Git
     git add .
@@ -74,7 +74,7 @@ while true; do
 
     # Verificamos si el push fue exitoso (código de salida 0)
     if [ $? -eq 0 ]; then
-        echo -e "$A Notificando al servidor para que actualice..."
+        echo -e "\n$A Notificando al servidor para que actualice...\n"
         
         # Hacemos la petición POST con curl
         curl -X POST "$URL_WEBHOOK" -d "secreto=$SECRETO"
