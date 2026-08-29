@@ -44,7 +44,7 @@ clear
         echo -e """${W} DIR:$R $DIR_PROJECT$R
 
   /\_/\  
- ( o.o ) $WBranch:$R ${RAMA}$R
+ ( o.o ) $W Branch:$R ${RAMA}$R
   > ^ <
                 """
 
