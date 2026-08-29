@@ -24,7 +24,9 @@ F="$bord [${cent}-${W}${bord}]$excr"
 A="${W}$bord [${bol}${Y}!${W}${bord}]$excr"
 
 # Configuración
-URL_WEBHOOK="http://192.168.101.30:4444/webhook.php"
+IP="192.168.101.30"
+PORT="5555"
+URL_WEBHOOK="http://192.168.101.30:5555/webhook.php"
 DIR_PROJECT="/c/src/github/kupload"
 
 SECRETO="1234"
@@ -43,9 +45,9 @@ cd $DIR_PROJECT
 clear
         echo -e """${W} DIR:$R $DIR_PROJECT$R
 
-  /\_/\  
- ( o.o ) $W Branch:$R ${RAMA}$R
-  > ^ <
+  /\_/\ $W IP:$R $IP
+ ( o.o )$W PORT:$R $PORT
+  > ^ < $W Branch:$R $RAMA
                 """
 
 while true; do
