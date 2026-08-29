@@ -1,8 +1,6 @@
 <?php
-// Define una clave para validar la petición
 $secreto_esperado = "1234";
 
-// Validar que sea POST y que el secreto coincida
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['secreto']) && $_POST['secreto'] === $secreto_esperado) {
     
     // Ruta absoluta donde está tu proyecto enlazado a Git y PM2
