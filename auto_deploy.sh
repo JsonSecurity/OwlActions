@@ -41,14 +41,16 @@ ULTIMO_MENSAJE=""
 
 cd $DIR_PROJECT
 clear
-        echo -e """$R
+        echo -e """${W} DIR:$R $DIR_PROJECT$R
+
   /\_/\  
- ( o.o )$W Iniciando!$R
-  > ^ <$W
+ ( o.o ) $WBranch:$R ${RAMA}$R
+  > ^ <
                 """
 
 while true; do
-    read -p "branch: ${RAMA} | message: " input_usuario
+    printf "$W Message:$R " 
+    read -r input_usuario
 
     if [ -z "$input_usuario" ]; then
         if [ -n "$ULTIMO_MENSAJE" ]; then
